@@ -883,13 +883,13 @@ impl WindowDelegate {
         // should be a reasonable default.
         let radius = if blur { 80 } else { 0 };
         let window_number = unsafe { self.window().windowNumber() };
-        unsafe {
-            ffi::CGSSetWindowBackgroundBlurRadius(
-                ffi::CGSMainConnectionID(),
-                window_number,
-                radius,
-            );
-        }
+        // unsafe {
+        //    ffi::CGSSetWindowBackgroundBlurRadius(
+        //        ffi::CGSMainConnectionID(),
+        //        window_number,
+        //        radius,
+        //    );
+        // }
     }
 
     pub fn set_visible(&self, visible: bool) {
